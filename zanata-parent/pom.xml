@@ -162,8 +162,12 @@
 		<hibernate.entitymanager.version>3.4.0.GA</hibernate.entitymanager.version>
 		<lucene.version>2.9.2</lucene.version>
 		<resteasy.version>2.1.0.GA</resteasy.version>
-		<richfaces.version>3.3.3.Final</richfaces.version>
-		<seam.version>2.2.0.GA</seam.version>
+		<richfaces.version>4.1.0.Final</richfaces.version>
+<!--  
+      <seam.bom>root</seam.bom>
+-->
+      <seam.bom>jboss-seam-parent</seam.bom>
+      <seam.version>2.3.0.Beta1</seam.version>
 		<tennera.version>0.6</tennera.version>
 		<guava.version>r06</guava.version>
 		<jackson.version>1.5.0</jackson.version>
@@ -638,29 +642,20 @@
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.seam</groupId>
-				<artifactId>root</artifactId>
+				<artifactId>${seam.bom}</artifactId>
 				<version>${seam.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
+<!-- 
 			<dependency>
-				<groupId>org.richfaces.framework</groupId>
-				<artifactId>richfaces-api</artifactId>
+				<groupId>org.richfaces</groupId>
+				<artifactId>richfaces-bom</artifactId>
 				<version>${richfaces.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
 			</dependency>
-
-			<dependency>
-				<groupId>org.richfaces.framework</groupId>
-				<artifactId>richfaces-impl</artifactId>
-				<version>${richfaces.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.richfaces.ui</groupId>
-				<artifactId>richfaces-ui</artifactId>
-				<version>${richfaces.version}</version>
-			</dependency>
+ -->
 
 			<dependency>
 				<groupId>commons-codec</groupId>
